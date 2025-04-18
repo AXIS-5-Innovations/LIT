@@ -41,7 +41,7 @@ class WifiTowerScanner:
                     tower_name = self.tower_map[mac_address.lower()]
                     # tower_signal.append([tower_name, float(signal_level)])
                     self.calculator.add_reading_and_distance(tower_name, float(signal_level))
-                    print(f"{tower_name}: {self.calculator.get_distances(tower_name)}")
+                    # print(f"{tower_name}: {self.calculator.get_distances(tower_name)}")
 
             # Return the tower names and their signal levels
             return tower_signal
