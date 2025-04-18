@@ -33,5 +33,3 @@ class RSSI:
         Convert meters to feet.
         """
         return meters * 3.28084
-
-
