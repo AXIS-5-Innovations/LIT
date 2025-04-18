@@ -1,5 +1,9 @@
+from kivy.config import Config
+Config.set('graphics', 'fullscreen', 'auto')
+
 import os
 from kivy.app import App
+from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.image import Image
 from kivy.clock import Clock
@@ -15,7 +19,7 @@ class multilaterationWidget(BoxLayout):
         self.img = Image(source=initial_source, allow_stretch=True, keep_ratio=True)
         self.add_widget(self.img)
 
-        Clock.schedule_interval(self.run_multilateration, 0.5)
+        Clock.schedule_interval(self.run_multilateration, 1.0)
 
     def update_image(self):
         # Check if the file exists, and update the image widget accordingly
